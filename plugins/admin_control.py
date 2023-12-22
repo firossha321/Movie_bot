@@ -183,8 +183,6 @@ async def list_users(bot, message):
     users = await db.get_all_users()
     out = "Uꜱᴇʀꜱ Sᴀᴠᴇᴅ Iɴ DB Aʀᴇ:\n\n"
     async for user in users:
-        name = ['name']
-        user id = ['id]
         out += f"<a href=tg://user?id={user['id']}>{user['name']}</a>\n"
     try:
         await sps.edit_text(out)
