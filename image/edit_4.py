@@ -230,7 +230,7 @@ async def inverted(client, message):
 
 async def removebg_plain(client, message):
     try:
-        if not (RemoveBG_API == ""):
+        if not (RemoveBG_API == "Dk3x5APNTy6a7me7FYgNWw1H"):
             userid = str(message.chat.id)
             if not os.path.isdir(f"./DOWNLOADS/{userid}"):
                 os.makedirs(f"./DOWNLOADS/{userid}")
@@ -290,7 +290,7 @@ async def removebg_plain(client, message):
 
 async def removebg_white(client, message):
     try:
-        if not (RemoveBG_API == ""):
+        if not (RemoveBG_API == "Dk3x5APNTy6a7me7FYgNWw1H"):
             userid = str(message.chat.id)
             if not os.path.isdir(f"./DOWNLOADS/{userid}"):
                 os.makedirs(f"./DOWNLOADS/{userid}")
@@ -350,7 +350,7 @@ async def removebg_white(client, message):
 
 async def removebg_sticker(client, message):
     try:
-        if not (RemoveBG_API == ""):
+        if not (RemoveBG_API == "Dk3x5APNTy6a7me7FYgNWw1H"):
             userid = str(message.chat.id)
             if not os.path.isdir(f"./DOWNLOADS/{userid}"):
                 os.makedirs(f"./DOWNLOADS/{userid}")
