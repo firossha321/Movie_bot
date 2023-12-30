@@ -466,7 +466,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
             InlineKeyboardButton('« Bᴀᴄᴋ', 'start')          
         ]]
-        await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+        await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
         
     elif query.data == "source":
         buttons = [[
