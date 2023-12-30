@@ -10,7 +10,7 @@ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ
     ABOUT_TXT = """ 
 ╔════❰ 𝙼𝙾𝚅𝙸𝙴 𝙱𝙾𝚃 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : ᴍᴏᴠɪᴇ ʙᴏᴛ
+║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/movie_bot_by_firos_bot>𝕄𝕆𝕍𝕀𝔼 𝔹𝕆𝕋</a>
 ║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/firossha>ғɪʀᴏs</a>
 ║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
 ║┣⪼📚ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
