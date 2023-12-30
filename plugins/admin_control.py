@@ -112,18 +112,6 @@ async def get_ststs(bot, message):
     free = get_size(free)
     await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
-@Client.on_message(filters.command('owner') & filters.incoming)
-async def get_ststs(bot, message):
-    rju = await message.reply('<b>Pʟᴇᴀꜱᴇ Wᴀɪᴛ...</b>')
-    total_users = await db.total_users_count()
-    totl_chats = await db.total_chat_count()
-    files = await Media.count_documents()
-    size = await db.get_db_size()
-    free = 536870912 - size
-    size = get_size(size)
-    free = get_size(free)
-    await query.edit_message_media(InputMediaPhoto(https://graph.org/file/359451163d72a0af99b80.jpg, script.PROGRAMMER_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
-
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
