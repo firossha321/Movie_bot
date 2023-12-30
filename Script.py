@@ -7,17 +7,24 @@ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ
     
     HELP_TXT = "Hᴇʏ {}\nHᴇʀᴇ Mꜱ Mʏ Hᴇʟᴩ"
 
-    ABOUT_TXT = """<b>✯ Mʏ ɴᴀᴍᴇ: {}
-✯ Dᴇᴠᴇʟᴏᴩᴇʀ: ғɪʀᴏs
-✯ Cᴏᴅᴇᴅ Oɴ: ᴩʏᴛʜᴏɴ/ᴩʏʀᴏɢʀᴀᴍ
-✯ Mʏ DᴀᴛᴀBᴀꜱᴇ: ᴍᴏɴɢᴏ-ᴅʙ
-✯ Mʏ Sᴇʀᴠᴇʀ: ᴀɴʏᴡʜᴇʀᴇ
-✯ Mʏ Vᴇʀꜱɪᴏɴ: movie_bot ᴠ1.0</b>"""
-   
-    SOURCE_TXT = """<b>NOTE:</b>
-- ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ◉› :<a https://github.com/firossha321/Movie_bot>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
-
-<b>ᴅᴇᴠ: <a herf=https://t.me/firossha>firos</a></b>"""
+    ABOUT_TXT = """ 
+╔════❰ 𝙼𝙾𝚅𝙸𝙴 𝙱𝙾𝚃 ❱═❍
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : ᴍᴏᴠɪᴇ ʙᴏᴛ
+║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/firossha>ғɪʀᴏs</a>
+║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
+║┣⪼📚ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
+║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 𝕄𝕆𝕍𝕀𝔼 𝔹𝕆𝕋 v2.0
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍ """   
+    SOURCE_TXT = """ 
+╔════❰ 𝙼𝙾𝚅𝙸𝙴 𝙱𝙾𝚃 ❱═❍
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼❣️sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://github.com/firossha321/Movie_bot>ᴍᴏᴠɪᴇ ʙᴏᴛ</a>
+║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
+║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 𝙼𝙾𝚅𝙸𝙴 𝙱𝙾𝚃 v2.0
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍ """
 
     FILE_TXT = """<b>➤ Hᴇʟᴘ Fᴏʀ Fɪʟᴇ Sᴛᴏʀᴇ</b>
 
