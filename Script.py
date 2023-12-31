@@ -11,7 +11,7 @@ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ
 ╔════❰ 𝙼𝙾𝚅𝙸𝙴 𝙱𝙾𝚃 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/movie_bot_by_firos_bot>𝕄𝕆𝕍𝕀𝔼 𝔹𝕆𝕋</a>
-║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/firossha>ғɪʀᴏs</a>
+║┣⪼👦ᴅᴇᴠ  : <a href=https://t.me/firossha>ғɪʀᴏs</a>
 ║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
 ║┣⪼📚ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
 ║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 𝕄𝕆𝕍𝕀𝔼 𝔹𝕆𝕋 v2.0
@@ -98,7 +98,7 @@ Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs
 • /get_template - Gᴇᴛ Cᴜʀʀᴇɴᴛ Iᴍᴅʙ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ Yᴏᴜʀ Gʀᴏᴜᴘ"""
 
     PROGRAMMER_TXT = """ ❃𓊈𒆜Oᴡɴᴇʀ Dᴇᴛᴀɪʟꜱ𒆜𓊉❃   
-◈ ᴛɢ ɴᴀᴍᴇ : ❃𓊈𒆜FIROS 𒆜𓊉❃
+◈ ᴛɢ ɴᴀᴍᴇ : <a href=https://t.me/firossha>❃𓊈𒆜FIROS 𒆜𓊉❃</a>
 ◈ ɴɪᴄᴋɴᴀᴍᴇ : ™ᴩʀᴏɢʀᴀᴍᴍᴇʀ™
 ◈ ᴜꜱᴇʀɴᴀᴍᴇ : @firossha
 ◈ ʀᴇᴀʟɴᴀᴍᴇ : ғɪʀᴏs
