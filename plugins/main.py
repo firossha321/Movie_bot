@@ -24,7 +24,7 @@ async def media_info(bot, m):
           if md.text:
               await m.reply_text("**hey man please reply with ( photo, video, sticker, documents, etc...) Only media **")  
           else:
-              await m.reply_text("ʙʏ ꜰɪʀᴏꜱ")                                                                                      
+              await m.reply_text("[404] Error")                                                                                      
        except Exception as e:
           print(e)
           await m.reply_text(f"[404] Error {e}")
