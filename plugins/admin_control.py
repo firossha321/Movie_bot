@@ -112,11 +112,6 @@ async def get_ststs(bot, message):
     free = get_size(free)
     await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
-@Client.on_message(filters.command('owner') & filters.incoming)
-async def get_ststs(bot, message):
-    own = await message.reply(script.PROGRAMMER_TXT)
-    await rju.edit(InputMediaPhoto(random.choice(PICS2),script.PROGRAMMER_TXT))
-
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
