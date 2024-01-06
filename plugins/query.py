@@ -553,23 +553,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "extmod":
         buttons = [[
-           InlineKeyboardButton('Connection','connt'),
-            InlineKeyboardButton('ID', 'a'),
-            InlineKeyboardButton('INFO', 'b')
+           InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴ','connt'),
+            InlineKeyboardButton('ɪᴅ', 'a'),
+            InlineKeyboardButton('ɪɴꜰᴏ', 'b')
         ],[
-            InlineKeyboardButton('IMDB', 'c'),
-            InlineKeyboardButton('TTS', 'd'),
-            InlineKeyboardButton('PASTE', 'e')
+            InlineKeyboardButton('ɪᴍᴅʙ', 'c'),
+            InlineKeyboardButton('ᴛᴛꜱ', 'd'),
+            InlineKeyboardButton('ᴩᴀꜱᴛᴇ', 'e')
         ],[
-            InlineKeyboardButton('TELEGRAPH', 'f'),
-            InlineKeyboardButton('JSON', 'g'),
-            InlineKeyboardButton('CARBON', 'h')
+            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴩʜ', 'f'),
+            InlineKeyboardButton('ᴊꜱᴏɴ', 'g'),
+            InlineKeyboardButton('ᴄᴀʀʙᴏɴ', 'h')
         ],[
-            InlineKeyboardButton('WRITTEN', 'i'),
-            InlineKeyboardButton('FONT', 'j'),
-            InlineKeyboardButton('SHARE', 'k')
+            InlineKeyboardButton('ᴡʀɪᴛᴛᴇɴ', 'i'),
+            InlineKeyboardButton('ꜰᴏɴᴛ', 'j'),
+            InlineKeyboardButton('ꜱʜᴀʀᴇ', 'k')
         ],[
-            InlineKeyboardButton('𝗬𝘁-𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿','yt')
+            InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ ɪᴅ','st'),
+            InlineKeyboardButton('ʏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ','yt')
         ],[
             InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
             InlineKeyboardButton('« Bᴀᴄᴋ', 'help')           
@@ -659,6 +660,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('« Bᴀᴄᴋ', 'extmod')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.SHARE_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+  
+    elif query.data == "st":
+        buttons = [[
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
+            InlineKeyboardButton('« Bᴀᴄᴋ', 'extmod')           
+        ]]
+        await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.ST_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
 
     elif query.data == "yt":
         buttons = [[
