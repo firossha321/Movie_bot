@@ -30,6 +30,10 @@
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
             "required": true
         },
+        "PREMIUM": {
+            "description": "Username or ID of premium subscribers. Separate multiple Admins by space.",
+            "required": false
+        },
         "SHORT_API": {
             "description": "Api Key Of shortner You Use.",
             "required": false
@@ -48,6 +52,7 @@
         },
         "AUTH_CHANNEL": {
             "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
+            "value" : "-1002093025125"
             "required": false
         },           
         "MAX_RIST_BTNS": {
@@ -151,6 +156,7 @@
         },
         "RemoveBG_API": {
             "description": "background remover website api key. get from https://www.remove.bg/b/background-removal-api",
+            "value" : "Dk3x5APNTy6a7me7FYgNWw1H"
             "required": false 
         },
         "P_TTI_SHOW_OFF": { 
