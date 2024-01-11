@@ -1,7 +1,7 @@
 {
     "name": "MOVIE-BOT",
     "description": "The Telegram Autofilter Bot",
-    "logo": "https://graph.org/file/b7e8484f6395a180b6380.jpg",
+    "logo": "https://graph.org/file/8d351d0de68f2a8f413b5.jpg",
     "keywords": ["Telegram", "auto-filter", "FIROS"],
     "repository": "https://github.com/firossha321/Movie_bot",
     "env": {
