@@ -2,7 +2,7 @@
 <p align="center">
 
 <h1 align="center">
-  <b> 𝗠𝗢𝗩𝗜𝗘_𝗕𝗢𝗧</b>
+  <b>UPDATION CHECKER</b>
 </h1>
 
 [![Stars](https://img.shields.io/github/stars/firossha321/Movie_bot?style=flat-square&color=yellow)](https://github.com/firossha321/Movie_bot/stargazers)
@@ -71,19 +71,60 @@
 * `SHORT_API` : Api Key Of Shortner Which You Use
 
 
-## Deploy to Heroku
 
+
+## Dᴇᴘᴏʟʏ
+Yᴏᴜ Cᴀɴ Dᴇᴘᴏʟʏ Tʜɪs Rᴇᴘᴏ AɴʏWʜᴇʀᴇ
+
+<a href=https://github.com/firossha321/Movie_bot>ᴏʀɪɢɪɴᴀʟ ʀᴇᴩᴏ</a>
+
+<details><summary>Dᴇᴘᴏʟʏ Tᴏ Hᴇʀᴏᴋᴜ {ᴘᴀɪᴅ}</summary>
+<p>
+<br>
 <a href="https://youtu.be/uv0WHxwHwfo"><img src="https://img.shields.io/badge/watch%20Heroku%20Tutorial-red.svg?logo=Youtube"></a>                     
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/firossha321/PROFESSOR-BOT)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/firossha321/Movie_bot)
+  </a>
+  </p>
+  </details>
 
-## Deploy to Koyeb
+<details><summary>Dᴇᴘᴏʟʏ Tᴏ Rᴇɴᴅᴇʀ {ғʀᴇᴇ}</summary>
+<p>
+<br>
+<a href="https://dashboard.render.com/select-repo?type=web">
+  <img src="https://render.com/images/deploy-to-render-button.svg" alt="deploy-to-render">
+<b>
+  </b>
+  </a>
+  </p>
+  <p>
+</details>
+<details><summary>Dᴇᴘᴏʟʏ Tᴏ Kᴏʏᴇʙ {ᴩᴀɪᴅ}</summary>
+<p>
+<br>
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/firossha/Movie_bot&branch=Movie_bot&name=Movie_bot">
+  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="deploy-to-koyeb">
+  </a
+  </p>
+  <p>
+</details>  
+<details><summary>Dᴇᴘᴏʟʏ Tᴏ Oᴋᴛᴇᴛᴏ {ᴘᴀɪᴅ}</summary>
+<p>
+<br>
+<a href="https://cloud.okteto.com/deploy?repository=https://github.com/firossha321/Movie_bot">
+  <img src="https://okteto.com/develop-okteto.svg" alt="deploy-to-okteto">
+  </a>
+  </p>
+  </details>
+<details><summary>Dᴇᴘᴏʟʏ Tᴏ Rᴀɪʟᴡᴀʏ {ғʀᴇᴇ}</summary>
+<p>
+<br>
+<a href="https://railway.app/new/template?template=https://github.com/firossha321/Movie_bot.git">
+  <img src="https://railway.app/button.svg" alt="deploy-to-railway">
+  </a>
+  </p>
+  </details>
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/firossha321/PROFESSOR-BOT&env[WEBHOOK]=True&env[BOT_TOKEN]&env[API_ID]&env[API_HASH]&env[CHANNELS]&env[ADMINS]&env[PICS]&env[LOG_CHANNEL]&env[AUTH_CHANNEL]&env[MAX_RIST_BTNS]=10&env[CUSTOM_FILE_CAPTION]&env[DATABASE_URL]&env[DATABASE_NAME]=MknBotz&env[COLLECTION_NAME]=Telegram_files&env[SUPPORT_CHAT]&env[IMDB]=True&env[PM_IMDB]=True&env[IMDB_TEMPLATE]&env[IMDB_DELET_TIME]=900&env[SINGLE_BUTTON]=True&env[PMFILTER]=True&env[G_FILTER]=True&env[BUTTON_LOCK]=True&env[P_TTI_SHOW_OFF]=True&run_command=python%20bot.py&branch=main&name=mr-rofessor)              
-
-## Deploy to Railway
-
-🙏 create button your self
 
 ## Basic Commands
 ```
