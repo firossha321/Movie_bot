@@ -1,7 +1,7 @@
 import pyrogram, asyncio, random, time, os
 from pyrogram import Client, filters, enums
 from pyrogram.types import *
-from database import add_user
+from database2 import add_user
 from info import PICS
 from text import txt
 
