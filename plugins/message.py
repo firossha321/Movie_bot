@@ -9,13 +9,13 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
 
 
-@Client.on_message(filters.command("person") & filters.user(ADMIN))
+@Client.on_message(filters.command("person") & filters.user(ADMINS))
 async def get_stats(bot, message):
     mr = await message.reply('**𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝙳𝙴𝚃𝙰𝙸𝙻𝚂.....**')
     total_users = await db.total_person_count()
     await mr.edit( text=f"🔍 TOTAL USER'S = `{total_users}`")
 
-@Client.on_message(filters.command("message") & filters.user(ADMIN) & filters.reply)
+@Client.on_message(filters.command("message") & filters.user(ADMINS) & filters.reply)
 async def broadcast_handler(bot: Client, m: Message):
     all_users = await db.get_all_person()
     broadcast_msg = m.reply_to_message
@@ -24,7 +24,7 @@ async def broadcast_handler(bot: Client, m: Message):
     failed = 0
     success = 0
     start_time = time.time()
-    total_users = await db.total_users_count()
+    total_users = await db.total_person_count()
     async for user in all_users:
         sts = await send_msg(user['id'], broadcast_msg)
         if sts == 200:
