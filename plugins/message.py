@@ -2,7 +2,7 @@ import os
 import time
 import asyncio 
 import datetime
-from info import ADMIN
+from info import ADMINS
 from database2 import db
 from pyrogram.types import Message
 from pyrogram import Client, filters
