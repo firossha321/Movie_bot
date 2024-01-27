@@ -394,7 +394,7 @@ async def geg_template(client, message):
 
 @Client.on_message(filters.command("dise")) 
 async def image(client, message):
-    await message.reply_photo(photo=random.choice(PICS)) 
+    await message.reply_photo(photo=random.choice(DISE)) 
 
 
 
