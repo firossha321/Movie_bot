@@ -393,7 +393,7 @@ async def geg_template(client, message):
     await sts.edit(f"Cᴜʀʀᴇɴᴛ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ {title} Iꜱ\n\n{template}")
 
 @Client.on_message(filters.command("owner")) 
-async def image(client, message):
+async def owner(client, message):
     caption1=""" 
 ╔════❰ 𒆜Oᴡɴᴇʀ Dᴇᴛᴀɪʟꜱ𒆜 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
