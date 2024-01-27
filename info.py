@@ -13,6 +13,7 @@ def is_enabled(value, default):
 # PyroClient Setup 
 API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
+TOSS=(environ.get('PICS','https://graph.org/file/93fd874d803bc33cfb625.jpg https://graph.org/file/50c74a43b806c2d1bb649.jpg')).split()
 BOT_TOKEN = environ['BOT_TOKEN']
 
 # Bot settings
