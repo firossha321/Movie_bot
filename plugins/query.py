@@ -694,20 +694,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
          
     elif query.data == "gpmanager":
         buttons = [[
-            InlineKeyboardButton('𝗞𝗶𝗰𝗸','𝗸𝗶𝗰𝗸'),
-            InlineKeyboardButton('𝗦𝘁𝗮𝘁𝘂𝘀','𝘀𝘁𝗮𝘁𝘂𝘀'),
-            InlineKeyboardButton('𝗗𝗸𝗶𝗰𝗸','𝗱𝗸𝗶𝗰𝗸'),
-            InlineKeyboardButton('𝗕𝗮𝗻','𝗯𝗮𝗻')
+            InlineKeyboardButton('ᴋɪᴄᴋ','𝗸𝗶𝗰𝗸'),
+            InlineKeyboardButton('ꜱᴛᴀᴛᴜꜱ','𝘀𝘁𝗮𝘁𝘂𝘀'),
+            InlineKeyboardButton('ᴅᴋɪᴄᴋ','𝗱𝗸𝗶𝗰𝗸'),
+            InlineKeyboardButton('ʙᴀɴ','𝗯𝗮𝗻')
             ],[
-            InlineKeyboardButton('𝗨𝗻𝗯𝗮𝗻','𝘂𝗻𝗯𝗮𝗻'),
-            InlineKeyboardButton('𝗧𝗯𝗮𝗻','𝘁𝗯𝗮𝗻'),
-            InlineKeyboardButton('𝗠𝘂𝘁𝗲','𝗺𝘂𝘁𝗲'),
-            InlineKeyboardButton('𝗨𝗻𝗺𝘂𝘁𝗲','𝘂𝗻𝗺𝘂𝘁𝗲')
+            InlineKeyboardButton('ᴜɴʙᴀɴ','𝘂𝗻𝗯𝗮𝗻'),
+            InlineKeyboardButton('ᴛʙᴀɴ','𝘁𝗯𝗮𝗻'),
+            InlineKeyboardButton('ᴍᴜᴛᴇ','𝗺𝘂𝘁𝗲'),
+            InlineKeyboardButton('ᴜɴᴍᴜᴛᴇ','𝘂𝗻𝗺𝘂𝘁𝗲')
             ],[
-            InlineKeyboardButton('𝗧𝗺𝘂𝘁𝗲','𝘁𝗺𝘂𝘁𝗲'),
-            InlineKeyboardButton('𝗣𝗶𝗻','𝗽𝗶𝗻'),
-            InlineKeyboardButton('𝗨𝗻𝗽𝗶𝗻','𝘂𝗻𝗽𝗶𝗻'),
-            InlineKeyboardButton('𝗣𝘂𝗿𝗴𝗲','𝗽𝘂𝗿𝗴𝗲')
+            InlineKeyboardButton('ᴛᴍᴜᴛᴇ','𝘁𝗺𝘂𝘁𝗲'),
+            InlineKeyboardButton('ᴩɪɴ','𝗽𝗶𝗻'),
+            InlineKeyboardButton('ᴜɴᴩɪɴ','𝘂𝗻𝗽𝗶𝗻'),
+            InlineKeyboardButton('ᴩᴜʀɢᴇ','𝗽𝘂𝗿𝗴𝗲')
             ],[
             InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
             InlineKeyboardButton('« Bᴀᴄᴋ', 'help')           
