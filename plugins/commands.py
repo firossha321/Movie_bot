@@ -392,6 +392,7 @@ async def geg_template(client, message):
     template = settings['template']
     await sts.edit(f"Cᴜʀʀᴇɴᴛ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ {title} Iꜱ\n\n{template}")
 
+
 @Client.on_message(filters.command("owner")) 
 async def owner(client, message):
     caption1=""" 
@@ -400,7 +401,7 @@ async def owner(client, message):
 ║┣⪼ᴛɢ ɴᴀᴍᴇ : <a href=https://t.me/firossha>❃𓊈𒆜FIROS 𒆜𓊉❃</a>
 ║┣⪼ɴɪᴄᴋɴᴀᴍᴇ : ™ᴩʀᴏɢʀᴀᴍᴍᴇʀ™
 ║┣⪼ᴜꜱᴇʀɴᴀᴍᴇ : @firossha
-║┣⪼ʀᴇᴀʟɴᴀᴍᴇ : ғɪʀᴏꜱ ꜱʜᴀ ᴍᴜʜᴀᴍᴍᴀᴅ
+║┣⪼ʀᴇᴀʟɴᴀᴍᴇ : ғɪʀᴏꜱ 
 ║┣⪼ᴩʟᴀᴄᴇ : ᴋᴇʀᴀʟᴀ
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍ """
