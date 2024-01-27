@@ -16,5 +16,4 @@ logger.setLevel(logging.ERROR)
 
 @Client.on_message(filters.command("owner")) 
 async def image(client, message):
-    await message.reply_photo(photo=random.choice(PICS2),caption=PROGRAMMER_TXT) 
-
+    await message.reply_photo(photo=random.choice(PICS2),caption=script.PROGRAMMER_TXT) 
