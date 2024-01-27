@@ -392,5 +392,9 @@ async def geg_template(client, message):
     template = settings['template']
     await sts.edit(f"Cᴜʀʀᴇɴᴛ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ {title} Iꜱ\n\n{template}")
 
+@Client.on_message(filters.command("dise")) 
+async def image(client, message):
+    await message.reply_photo(photo=random.choice(PICS)) 
+
 
 
