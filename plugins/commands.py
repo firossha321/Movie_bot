@@ -398,5 +398,5 @@ async def image(client, message):
 
 @Client.on_message(filters.command("owner")) 
 async def image(client, message):
-    await message.reply_photo(photo=random.choice(PICS2),caption=script.PROGRAMMER_TXT) 
+    await message.reply(script.PROGRAMMER_TXT) 
 
