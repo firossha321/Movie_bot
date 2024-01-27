@@ -6,7 +6,7 @@ from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, DISE, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, START_MESSAGE, FORCE_SUB_TEXT, SUPPORT_CHAT
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, DISE, PICS, PICS2, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, START_MESSAGE, FORCE_SUB_TEXT, SUPPORT_CHAT
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
 from database.connections_mdb import active_connection
 
@@ -395,4 +395,18 @@ async def geg_template(client, message):
 @Client.on_message(filters.command("dise")) 
 async def image(client, message):
     caption="ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ꜱᴄᴏʀᴇ"
-    await message.reply_photo(photo=random.choice(DISE),caption=caption) 
+    await message.reply_photo(photo=random.choice(DISE),caption=caption)
+
+@Client.on_message(filters.command("owner")) 
+async def image(client, message):
+    caption1=""" 
+╔════❰ 𒆜Oᴡɴᴇʀ Dᴇᴛᴀɪʟꜱ𒆜 ❱═❍
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼ᴛɢ ɴᴀᴍᴇ : <a href=https://t.me/firossha>❃𓊈𒆜FIROS 𒆜𓊉❃</a>
+║┣⪼ɴɪᴄᴋɴᴀᴍᴇ : ™ᴩʀᴏɢʀᴀᴍᴍᴇʀ™
+║┣⪼ᴜꜱᴇʀɴᴀᴍᴇ : @firossha
+║┣⪼ʀᴇᴀʟɴᴀᴍᴇ : ғɪʀᴏꜱ ꜱʜᴀ ᴍᴜʜᴀᴍᴍᴀᴅ
+║┣⪼ᴩʟᴀᴄᴇ : ᴋᴇʀᴀʟᴀ
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍ """
+    await message.reply_photo(photo=random.choice(PICS2),caption=caption1) 
