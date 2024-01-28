@@ -570,13 +570,38 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ꜱʜᴀʀᴇ', 'k')
         ],[
             InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ ɪᴅ','st'),
-            InlineKeyboardButton('ʏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ','yt')
+            InlineKeyboardButton('ʏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ','yt'),
+            InlineKeyboardButton('ꜰᴜɴ ᴢᴏɴᴇ','fun')
         ],[
             InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
             InlineKeyboardButton('« Bᴀᴄᴋ', 'help')           
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.EXTRAMOD_TXT, enums.ParseMode.HTML),             reply_markup=InlineKeyboardMarkup(buttons))
-       
+      
+    elif query.data == "fun":
+        buttons = [[
+            InlineKeyboardButton('🎲ᴅɪꜱᴇ','dise'),
+            InlineKeyboardButton('🪙ᴛᴏꜱꜱ','toss')
+        ],[
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
+            InlineKeyboardButton('« Bᴀᴄᴋ', 'extmod')           
+        ]]
+        await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.FUN_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+
+    elif query.data == "dise":
+        buttons = [[
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
+            InlineKeyboardButton('« Bᴀᴄᴋ', 'fun')           
+        ]]
+        await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.DISE_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+
+    elif query.data == "toss":
+        buttons = [[
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
+            InlineKeyboardButton('« Bᴀᴄᴋ', 'fun')           
+        ]]
+        await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.TOSS_TXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+
     elif query.data == "connt":
         buttons = [[
             InlineKeyboardButton('✘ Cʟᴏꜱᴇ', 'close_data'),
