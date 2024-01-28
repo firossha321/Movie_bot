@@ -84,7 +84,6 @@ async def next_page(bot, query):
     try: n_offset = int(n_offset)
     except: n_offset = 0
 
-    sticker_id = "CAACAgIAAxkBAAEBxERltjOT-pqdOXT-Oo8FkHmTo6wBPAACcQgAAoSUQUlvaAkaprvOcx4E"
     sti = await bot.send_sticker(chat_id=query.message.chat.id, sticker=sticker_id)
 
     if not files: return
@@ -160,13 +159,22 @@ async def advantage_spoll_choker(bot, query):
             await asyncio.sleep(10)
             await k.delete()
 
+sticker_id = "CAACAgIAAxkBAAEBxERltjOT-pqdOXT-Oo8FkHmTo6wBPAACcQgAAoSUQUlvaAkaprvOcx4E"
+
 
 @Client.on_message(filters.group & filters.text & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.incoming & filters.group)
+async def send_sticker(client, chat_id, sticker_file_id):
+    try:
+        await client.send_sticker(chat_id=chat_id, sticker=sticker_id)
+    except Exception as e:
+        print(f"Error sending sticker: {e}")
+
 async def give_filter(client, message):
     if G_FILTER:
         if G_MODE.get(str(message.chat.id)) == "False":
             return 
         else:
+            await send_sticker(client, message.chat.id,sticker_id)
             kd = await global_filters(client, message)
         if kd == False:          
             k = await manual_filters(client, message)
@@ -275,9 +283,11 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}"
     if imdb and imdb.get('poster'):
         try:
+            await client.send_sticker(client, message.chat.id, sticker_id)
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
             await hehe.delete() 
+            await client.delete_messages(message.chat.id, hehe.message_id)
             await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
