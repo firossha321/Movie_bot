@@ -12,5 +12,4 @@ async def password(bot, update):
     limit = int(qw)
     random_value = "".join(random.sample(password, limit))
     txt = f"<b>Limit:</b> {str(limit)} \n<b>Password: <code>{random_value}</code>"
-    btn = InlineKeyboardMarkup([[InlineKeyboardButton('ᴍʏ ɢʀᴏᴜᴩ', url='https://t.me/moviegroupallmovie')]])
-    await message.edit_text(text=txt, reply_markup=btn, parse_mode=enums.ParseMode.HTML)
+    await message.edit_text(text=txt, parse_mode=enums.ParseMode.HTML)
