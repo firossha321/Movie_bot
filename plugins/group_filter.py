@@ -33,13 +33,13 @@ async def fil_mod(client, message):
          args = message.text.split(None, 1)[1].lower() 
       except: 
          return await message.reply("**ɪɴᴄᴏᴍᴩʟᴇᴛᴇ ᴄᴏᴍᴍᴀɴᴅ...**")
-
+      
       m = await message.reply("**ꜱᴇᴛᴛɪɴɢ....**")
 
       if args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True"
           await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
-
+      
       elif args in mode_of:
           FILTER_MODE[str(message.chat.id)] = "False"
           await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
@@ -56,13 +56,13 @@ async def g_fil_mod(client, message):
          args = message.text.split(None, 1)[1].lower() 
       except: 
          return await message.reply("**ɪɴᴄᴏᴍᴩʟᴇᴛᴇ ᴄᴏᴍᴍᴀɴᴅ...**")
-
+      
       m = await message.reply("**ꜱᴇᴛᴛɪɴɢ...**")
 
       if args in mode_on:
           G_MODE[str(message.chat.id)] = "True"
           await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
-
+      
       elif args in mode_of:
           G_MODE[str(message.chat.id)] = "False"
           await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
@@ -79,12 +79,10 @@ async def next_page(bot, query):
     except: offset = 0
     search = temp.GP_BUTTONS.get(key)
     if not search: return await query.answer("Yᴏᴜ Aʀᴇ Usɪɴɢ Oɴᴇ Oғ Mʏ Oʟᴅ Mᴇssᴀɢᴇs, Pʟᴇᴀsᴇ Sᴇɴᴅ Tʜᴇ Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", show_alert=True)
-
+    
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
     try: n_offset = int(n_offset)
     except: n_offset = 0
-
-    sti = await bot.send_sticker(chat_id=query.message.chat.id, sticker=sticker_id)
 
     if not files: return
     settings = await get_settings(query.message.chat.id)
@@ -126,13 +124,11 @@ async def next_page(bot, query):
                 InlineKeyboardButton("ɴᴇxᴛ ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
-
+    
     try:
         await query.edit_message_reply_markup( reply_markup=InlineKeyboardMarkup(btn))
     except MessageNotModified:
         pass
-
-    await bot.delete_message(chat_id=query.message.chat.id, message_id=sti.message)
     await query.answer()
 
 
@@ -159,22 +155,13 @@ async def advantage_spoll_choker(bot, query):
             await asyncio.sleep(10)
             await k.delete()
 
-sticker_id = "CAACAgIAAxkBAAEBxERltjOT-pqdOXT-Oo8FkHmTo6wBPAACcQgAAoSUQUlvaAkaprvOcx4E"
-
 
 @Client.on_message(filters.group & filters.text & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.incoming & filters.group)
-async def send_sticker(client, chat_id, sticker_file_id):
-    try:
-        await client.send_sticker(chat_id=chat_id, sticker=sticker_id)
-    except Exception as e:
-        print(f"Error sending sticker: {e}")
-
 async def give_filter(client, message):
     if G_FILTER:
         if G_MODE.get(str(message.chat.id)) == "False":
             return 
         else:
-            await send_sticker(client, message.chat.id, sticker_id)
             kd = await global_filters(client, message)
         if kd == False:          
             k = await manual_filters(client, message)
@@ -242,7 +229,7 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="❄️ ᴩᴀɢᴇꜱ 1/1", callback_data="pages")]
         )
-
+    
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
@@ -283,11 +270,9 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}"
     if imdb and imdb.get('poster'):
         try:
-            await client.send_sticker(client, message.chat.id, sticker_id)
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
             await hehe.delete() 
-            await client.delete_messages(message.chat.id, hehe.message_id)
             await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -471,6 +456,8 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
+
 
 
 
