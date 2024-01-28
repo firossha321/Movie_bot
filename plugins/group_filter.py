@@ -174,7 +174,7 @@ async def give_filter(client, message):
         if G_MODE.get(str(message.chat.id)) == "False":
             return 
         else:
-            await send_sticker(client, message.chat.id,sticker_id)
+            await send_sticker(client, message.chat.id, sticker_id)
             kd = await global_filters(client, message)
         if kd == False:          
             k = await manual_filters(client, message)
