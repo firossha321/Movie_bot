@@ -2,7 +2,7 @@
 <p align="center">
 
 <h1 align="center">
-  <b>UPDATION CHECKER</b>
+  <b>MOVIE BOT</b>
 </h1>
 
 [![Stars](https://img.shields.io/github/stars/firossha321/Movie_bot?style=flat-square&color=yellow)](https://github.com/firossha321/Movie_bot/stargazers)
