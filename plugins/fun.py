@@ -2,6 +2,7 @@ import os, re, json, base64, logging, random, asyncio
 
 from Script import script
 import time
+from plugins.filter2 import f_onw_fliter
 from info import COMMAND_HAND_LER
 from database.users_chats_db import db
 from pyrogram import Client, filters, enums
