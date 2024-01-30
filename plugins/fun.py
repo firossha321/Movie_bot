@@ -16,11 +16,6 @@ from database.connections_mdb import active_connection
 logger = logging.getLogger(__name__)
 BATCH_FILES = {}
 
-f_onw_fliter = filters.create(
-    func=onw_filter,
-    name="OnwFilter"
-)
-
 @Client.on_message(filters.command("toss")) 
 async def toss(client, message):
     cap1="ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ʀᴇꜱᴜʟᴛ"
