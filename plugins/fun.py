@@ -2,7 +2,6 @@ import os, re, json, base64, logging, random, asyncio
 
 from Script import script
 import time
-from plugins.filter2 import f_onw_fliter
 from info import COMMAND_HAND_LER
 from database.users_chats_db import db
 from pyrogram import Client, filters, enums
@@ -28,4 +27,8 @@ async def toss(client, message):
 @Client.on_message(filters.command("dise")) 
 async def roll_dice(client, message):
     cap="ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ꜱᴄᴏʀᴇ"
+    EMOJI ="🎲"
+    z = await message.reply(EMOJI)
+    time.sleep(3)
     await message.reply_photo(photo=random.choice(DISE),caption=cap)
+    await z.delete()
