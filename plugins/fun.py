@@ -24,11 +24,16 @@ async def toss(client, message):
     await firos.delete()
 
 
-@Client.on_message(filters.command("dise")) 
+DICE_E_MOJI = "🎲"
+
+@Client.on_message(filters.command(["dise", "dice"], COMMAND_HAND_LER))
 async def roll_dice(client, message):
-    cap="ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ꜱᴄᴏʀᴇ"
-    EMOJI ="🎲"
-    z = await message.reply(EMOJI)
-    time.sleep(3)
-    await message.reply_photo(photo=random.choice(DISE),caption=cap)
-    await z.delete()
+    rep_mesg_id = message.id
+    if message.reply_to_message:
+        rep_mesg_id = message.reply_to_message.id
+    await client.send_dice(
+        chat_id=message.chat.id,
+        emoji=DICE_E_MOJI,
+        disable_notification=True,
+        reply_to_message_id=rep_mesg_id
+    )
