@@ -231,13 +231,13 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ", quote=True)
+        k = await msg.reply_sticker("CAACAgUAAxkBAANTZcm4iP3hwhBNhFHKR_eJXrtcah0AAm0OAALlw0hW7ja2BZDwNq8eBA", quote=True)
         await asyncio.sleep(10)
         return await k.delete()
     temp.PM_SPELL[str(msg.id)] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ", reply_markup=InlineKeyboardMarkup(btn), quote=True)
+    await msg.reply_sticker("CAACAgUAAxkBAANTZcm4iP3hwhBNhFHKR_eJXrtcah0AAm0OAALlw0hW7ja2BZDwNq8eBA", reply_markup=InlineKeyboardMarkup(btn), quote=True)
 
 
 
