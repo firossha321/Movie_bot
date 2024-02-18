@@ -199,7 +199,6 @@ async def auto_filter(client, msg, spoll=False):
     else:
         settings = await get_settings(msg.message.chat.id)
         message = msg.message.reply_to_message  # msg will be callback query
-        firo=await message.reply_sticker("CAACAgIAAxkBAAIXXWRwvVZPxlLGkm2xcdXPvStNnFG6AAJxCAAChJRBSW9oCRqmu85zHgQ")
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
     req = message.from_user.id if message.from_user else 0
@@ -272,7 +271,6 @@ async def auto_filter(client, msg, spoll=False):
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await firo.delete()
             await asyncio.sleep(IMDB_DELET_TIME)
             await hehe.delete() 
             await message.delete()
