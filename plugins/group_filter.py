@@ -193,7 +193,7 @@ async def auto_filter(client, msg, spoll=False):
             if not files:return await firos.delete()
             if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
-                else:
+            else:
                     return
         else:
             return
