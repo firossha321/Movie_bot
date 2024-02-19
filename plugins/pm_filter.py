@@ -247,3 +247,4 @@ async def pm_spoll_choker(msg):
     R = await msg.reply_photo(photo=SPELL, caption = "I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn), quote=True)
     await asyncio.sleep(15)
     return await R.delete()
+
