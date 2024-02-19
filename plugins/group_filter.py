@@ -190,8 +190,7 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             firos = await message.reply_sticker("CAACAgIAAxkBAAIXXWRwvVZPxlLGkm2xcdXPvStNnFG6AAJxCAAChJRBSW9oCRqmu85zHgQ")
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
-            if not files:
-            	await firos.delete()
+            if not files:return await firos.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
                 else:
