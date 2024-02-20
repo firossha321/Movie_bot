@@ -105,8 +105,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             search = message.text
             firo = await message.reply_sticker("CAACAgIAAxkBAAIXXWRwvVZPxlLGkm2xcdXPvStNnFG6AAJxCAAChJRBSW9oCRqmu85zHgQ")
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
-            if not files:return await pm_spoll_choker(msg)
-            if not files:return await firo.delete()
+            if not files:return await (pm_spoll_choker(msg) , firo.delete())
         else: return 
     else:
         message = msg.message.reply_to_message  # msg will be callback query
@@ -247,4 +246,3 @@ async def pm_spoll_choker(msg):
     R = await msg.reply_photo(photo=SPELL, caption = "I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn), quote=True)
     await asyncio.sleep(15)
     return await R.delete()
-
