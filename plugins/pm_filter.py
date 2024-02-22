@@ -105,7 +105,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             search = message.text
             firo = await message.reply_sticker("CAACAgIAAxkBAAIXXWRwvVZPxlLGkm2xcdXPvStNnFG6AAJxCAAChJRBSW9oCRqmu85zHgQ")
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
-            if not files:return await pm_spoll_choker(msg)
+            if not files:return await (firo.delete(),await pm_spoll_choker(msg))
         else: return 
     else:
         message = msg.message.reply_to_message  # msg will be callback query
@@ -217,7 +217,6 @@ async def pm_spoll_choker(msg):
     await firo.delete()
     if not g_s:
         k = await msg.reply_photo(photo=SPELL, caption="I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ", quote=True)
-    	await firo.delete()
         await asyncio.sleep(10)
         return await k.delete()
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -240,7 +239,6 @@ async def pm_spoll_choker(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = msg.reply_photo(photo=SPELL, caption = "I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Cʜᴇᴄᴋ Yᴏᴜʀ Sᴘᴇʟʟɪɴɢ", quote=True)
-    	await firo.delete()
         await asyncio.sleep(10)
         return await k.delete()
     temp.PM_SPELL[str(msg.id)] = movielist
