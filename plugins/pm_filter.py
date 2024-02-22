@@ -216,6 +216,7 @@ async def pm_spoll_choker(msg):
     gs_parsed = []
     await firo.delete()
     if not g_s:
+    	await firo.delete()
         k = await msg.reply_photo(photo=SPELL, caption="I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ", quote=True)
         await asyncio.sleep(10)
         return await k.delete()
@@ -238,6 +239,7 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
+    	await firo.delete()
         k = msg.reply_photo(photo=SPELL, caption = "I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Cʜᴇᴄᴋ Yᴏᴜʀ Sᴘᴇʟʟɪɴɢ", quote=True)
         await asyncio.sleep(10)
         return await k.delete()
