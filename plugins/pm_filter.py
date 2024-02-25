@@ -103,8 +103,10 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text): return
         if 2 < len(message.text) < 100:
             search = message.text
+            firo = await message.reply_sticker("CAACAgIAAxkBAAIXXWRwvVZPxlLGkm2xcdXPvStNnFG6AAJxCAAChJRBSW9oCRqmu85zHgQ")
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:return await pm_spoll_choker(msg)
+            if not files:return await firo.delete()
         else: return 
     else:
         message = msg.message.reply_to_message  # msg will be callback query
@@ -205,7 +207,6 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         await abc.delete()        
     if pmspoll:
         await msg.message.delete()
-        await firo.delete()
 
 async def pm_spoll_choker(msg):
     query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)", "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
@@ -213,7 +214,6 @@ async def pm_spoll_choker(msg):
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
-    await firo.delete()
     if not g_s:
         k = await msg.reply_photo(photo=SPELL, caption="I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ", quote=True)
         await asyncio.sleep(10)
@@ -243,6 +243,4 @@ async def pm_spoll_choker(msg):
     temp.PM_SPELL[str(msg.id)] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    R = await msg.reply_photo(photo=SPELL, caption = "I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn), quote=True)
-    await asyncio.sleep(15)
-    return await R.delete()
+    await msg.reply_photo(photo=SPELL, caption = "I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn), quote=True)
