@@ -33,12 +33,10 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton("🧐𝗣𝗥𝗢𝗚𝗥𝗔𝗠𝗠𝗘𝗥😎", url="https://t.me/firossha")
-            ],[
             InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/firosshamuhammad")
+            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/mkn_bots_updates")
             ],[      
             InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
@@ -47,36 +45,42 @@ async def start(client, message):
         await asyncio.sleep(2)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return await m.delete()
-
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
+        
+        if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
-            logger.error("MAKE SURE BOT IS ADMIN IN FORCESUB CHANNEL")
+            logger.error("Make sure Bot is admin in Forcesub channel")
             return
-        btn = [[InlineKeyboardButton("Jᴏɪɴ Mʏ Cʜᴀɴɴᴇʟ ✨", url=invite_link.invite_link)]]
+        btn = [
+            [
+                InlineKeyboardButton(
+                    "🤖 Jᴏɪɴ Uᴩᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 😜", url=invite_link.invite_link
+                )
+            ]
+        ]
+
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("⟳ Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 Tʀʏ Aɢᴀɪɴ 🔄", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("⟳ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-
-        try:
-            return await client.send_message(chat_id=message.from_user.id, text=FORCE_SUB_TEXT, reply_markup=InlineKeyboardMarkup(btn), parse_mode=enums.ParseMode.DEFAULT)
-        except Exception as e:
-            print(f"Force Sub Text Error\n{e}")
+                btn.append([InlineKeyboardButton(" 🔄 Tʀʏ Aɢᴀɪɴ 🔄", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+        await client.send_message(
+            chat_id=message.from_user.id,
+            text="**Please Join My Updates Channel to use this Bot!**",
+            reply_markup=InlineKeyboardMarkup(btn),
+            parse_mode=enums.ParseMode.MARKDOWN
+            )
             return await client.send_message(chat_id=message.from_user.id, text=script.FORCE_SUB_TEXT, reply_markup=InlineKeyboardMarkup(btn), parse_mode=enums.ParseMode.DEFAULT)
-
+        
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton("🧐𝗣𝗥𝗢𝗚𝗥𝗔𝗠𝗠𝗘𝗥😎", url="https://t.me/firossha")
-            ],[
             InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/firosshamuhammad")
+            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/mkn_bots_updates")
             ],[      
             InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
@@ -85,14 +89,14 @@ async def start(client, message):
         await asyncio.sleep(2)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return await m.delete()
-
+        
     data = message.command[1]
     try:
         pre, file_id = data.split('_', 1)
     except:
         file_id = data
         pre = ""
-
+        
     if data.split("-", 1)[0] == "BATCH":
         sts = await message.reply("PLEASE WAIT......")
         file_id = data.split("-", 1)[1]
@@ -129,7 +133,7 @@ async def start(client, message):
                 continue
             await asyncio.sleep(1) 
         return await sts.delete()
-
+        
     elif data.split("-", 1)[0] == "DSTORE":
         sts = await message.reply("PLEASE WAIT....")
         b_string = data.split("-", 1)[1]
@@ -174,7 +178,7 @@ async def start(client, message):
                     continue
             await asyncio.sleep(1) 
         return await sts.delete()
-
+        
 
     files_ = await get_file_details(file_id)           
     if not files_:
@@ -192,7 +196,7 @@ async def start(client, message):
             return await msg.edit_caption(f_caption)
         except: pass
         return await message.reply('NO SUCH FILE EXIST...')
-
+        
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)
@@ -400,7 +404,7 @@ async def owner(client, message):
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼ᴛɢ ɴᴀᴍᴇ : <a href=https://t.me/firossha>❃𓊈𒆜FIROS 𒆜𓊉❃</a>
 ║┣⪼ɴɪᴄᴋɴᴀᴍᴇ : ™ᴩʀᴏɢʀᴀᴍᴍᴇʀ™
-║┣⪼ᴜꜱᴇʀɴᴀᴍᴇ : @firossha
+║┣⪼ᴜꜱᴇʀɴᴀᴍᴇ : @firossha
 ║┣⪼ʀᴇᴀʟɴᴀᴍᴇ : ғɪʀᴏꜱ 
 ║┣⪼ᴩʟᴀᴄᴇ : ᴋᴇʀᴀʟᴀ
 ║╰━━━━━━━━━━━━━━━➣
